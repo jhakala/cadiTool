@@ -33,7 +33,7 @@ def getCadiJson():
   ## get cookie
   cookieFileName = "cadiana.sso"
   cookieFile = path.join(getcwd(), cookieFileName)
-  #check_call(shlex.split("/usr/bin/cern-get-sso-cookie -u https://icms.cern.ch/tools/api/cadiAnalyses --krb --outfile {0} --reprocess".format(cookieFileName)))
+  check_call(shlex.split("/usr/bin/cern-get-sso-cookie -u https://icms.cern.ch/tools/api/cadiAnalyses --krb --outfile {0} --reprocess".format(cookieFileName)))
   ## setup for stuff needed to submit the http request with a cookie
   apiURL = "https://icms.cern.ch/tools/api/cadiAnalyses"
   ## parsing of the cookie
